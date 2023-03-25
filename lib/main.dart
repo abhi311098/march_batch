@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -55,26 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 30,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
+      body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-              style: Theme.of(context).textTheme.headline1,
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline1,
-            ),
+           Wrap(
+             children: [
+               Image.asset('assets/images/iimg.jpg', height: 300, width: 200,),
+               Text("Hi Ducatddddddddddddddddddddddddd", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
+             ],
+           )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
