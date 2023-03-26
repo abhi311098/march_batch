@@ -7,13 +7,14 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headline1: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.bold,
@@ -47,26 +48,210 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: const Drawer(),
       appBar: AppBar(
         centerTitle: true,
-        actions: [
-          Icon(Icons.email)
-        ],
-        elevation: 30,
+        actions: [const Icon(Icons.email)],
+        elevation: 5,
         title: Text(widget.title),
       ),
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-           Wrap(
-             children: [
-               Image.asset('assets/images/iimg.jpg', height: 300, width: 200,),
-               Text("Hi Ducatddddddddddddddddddddddddd", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
-             ],
-           )
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(flex: 2, child: Container(
+                  height: 300,
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                  margin: EdgeInsets.all(5),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: Colors.red,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        spreadRadius: 5,
+                        blurRadius: 1,
+                      )
+                    ],
+                    image: DecorationImage(
+                      opacity: 0.25,
+                      image: AssetImage('assets/images/iimg.jpg'),
+                    )
+                  ),
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      textAlign: TextAlign.center,
+                      maxLines: 30,
+                      overflow: TextOverflow.ellipsis,
+                    )
+                )),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: [
+                Expanded(flex: 2, child: Image.asset('assets/images/iimg.jpg')),
+                const SizedBox(
+                  width: 20,
+                ),
+                const Expanded(
+                    flex: 3,
+                    child: Text(
+                      'assets/images/iimg.jpg assets/images/iimg.jpg assets/images/iimg.jpg ',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
           ],
         ),
+      ),
     );
   }
 }
