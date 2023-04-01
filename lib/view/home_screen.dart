@@ -8,17 +8,12 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ListDesign(),
-            ListDesign(),
-            ListDesign(),
-            ListDesign(),
-          ],
-        ),
-      ),
+      body: ListView.separated(
+        itemCount: 20,
+        shrinkWrap: true,
+        padding: EdgeInsets.all(20),
+        itemBuilder: (context, index) => ListDesign(index: (index + 1)),
+        separatorBuilder: (context, index) => SizedBox(height: 10,),),
     );
   }
 }
